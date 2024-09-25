@@ -13,8 +13,8 @@ int main() {
         num=num/10;
     }
     if (add==old) {
-        printf("%d is a armstrong number\n",old);}
-    else {printf("%d is not a armstrong number\n",old);
+        printf("%d is a Strong number\n",old);}
+    else {printf("%d is not a Strong number\n",old);
     return 0;
     }
 }
