@@ -1,3 +1,4 @@
+//THIS CODE HAVE ERROR AND WE HAVE TO FIND ERROR IN THIS AND THE CORRECTED CODE IS ATTENDANCE_2.C
 #include<stdio.h>
 int main() {
     //Declaration
