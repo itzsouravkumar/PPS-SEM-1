@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 // FACTORIAL FUNCTION
 int calculateFactorial(int num) {
     int result = 1;
@@ -7,6 +8,7 @@ int calculateFactorial(int num) {
     }
     return result;
 }
+
 // SWAPPING FUNCTION
 int swapNumbers(int *a, int *b) {
     int temp = *a;
@@ -18,14 +20,18 @@ int swapNumbers(int *a, int *b) {
 int main() {
     int number, factorialResult, num1, num2;
 
-    printf("Enter a number for factorial: ");
+    // HERE I HAVE DEFINED FUNCTION POINTERS
+    int (*factorialPtr)(int) = calculateFactorial;  // POINTER TO FACTORAIL FUNCTION
+    int (*swapPtr)(int*, int*) = swapNumbers;       // POINTER TO SWAP FUNCTION
+
+    printf("Enter the factorial number: ");
     scanf("%d", &number);
-    factorialResult = calculateFactorial(number); // CALLING FACTORIAL FUNCTION
+    factorialResult = factorialPtr(number); // CALLING FACTORIAL THROUGH POINTER
     printf("Factorial of %d is %d\n", number, factorialResult);
 
     printf("Enter two numbers to swap: ");
     scanf("%d %d", &num1, &num2);
-    swapNumbers(&num1, &num2); // CALLING SWAP FUNCTION
+    swapPtr(&num1, &num2); // CALLING SWAP THROGH POINTER
     printf("After swapping: %d %d\n", num1, num2);
 
     return 0;
