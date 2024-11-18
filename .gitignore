@@ -1,8 +1,9 @@
-.vscode
-*.exe
-*.out
-**/[^.]*
-!**/*.c
-!**/*.py
+*
+
+!*.py
+!*.c
+!.gitignore
 
 !*/
+
+tempCodeRunnerFile.c
