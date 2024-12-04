@@ -9,7 +9,7 @@ long long factorial(int n) {
     return fact;
 }
 
-// Function to swap two numbers and return 1 if successful
+// Function to swap two numbers
 int swap(int *x, int *y) {
     int temp = *x;
     *x = *y;
